@@ -19,7 +19,6 @@ function App() {
     axios
       .get('https://dadjoke-flask-api.herokuapp.com/dadjoke')
       .then(({data}) => {
-        throw err
         setJoke(data.joke);
         setLoading(false); 
       }) 

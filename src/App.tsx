@@ -21,6 +21,7 @@ function App() {
       .then(({data}) => {
         setJoke(data.joke);
         setLoading(false);
+        throw new Error()
       }) 
       .catch(err => {
         console.log(err);

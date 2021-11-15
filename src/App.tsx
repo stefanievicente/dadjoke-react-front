@@ -20,12 +20,13 @@ function App() {
       .get('https://dadjoke-flask-api.herokuapp.com/dadjoke')
       .then(({data}) => {
         setJoke(data.joke);
-        setLoading(false);
+        setLoading(false); 
       }) 
       .catch(err => {
         console.log(err);
         setJoke('Something went wrong :( Try again!')
         setErr(true);
+        setLoading(false); 
       })
   }
 
